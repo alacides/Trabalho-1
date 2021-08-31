@@ -2,11 +2,8 @@ const express = require('express')
 const http = require('http')
 const WebSocket = require('ws')
 var MongoClient = require('mongodb').MongoClient
-//const bodyParser = require('body-parser');
 
-
-var url = 'mongodb://localhost:27017'
-//var bodyParser = require('body-parser'); 
+var url = 'mongodb://localhost:27017' 
 
 
 var app = express();
@@ -26,9 +23,6 @@ app2.use(express.static(__dirname + '/mongodb'));
 const port = 10000
 const server = http.createServer(express);
 const wss = new WebSocket.Server({server})
-//app2.use(bodyParser.urlencoded({extended: true}));
-//app2.use(express.json());
-//Usuarios = ['Jorge','Lucas','Matu']
 num_people = 0
 
 
