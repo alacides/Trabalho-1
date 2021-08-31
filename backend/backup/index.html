@@ -1,0 +1,81 @@
+<style>
+  .center {
+    margin:auto;
+    width: 100%;
+    justify-content: center;
+  }
+  .texto{
+    margin: auto;
+    text-align: center;
+    float:inline-start;
+    display: none;
+    
+  }
+  .players{
+    margin:auto;
+    width: 77%;
+  }
+  .login{
+    width: 20%;
+    margin: auto;
+    margin-top: 20%;
+  }
+  .Enviar{
+    float: right;
+    margin: auto;
+    width: 90%;
+  }
+  .overlay {
+  position: fixed;
+  display: none;
+  width: 20%;
+  height: 10%;
+  top: 50%;
+  left: 40%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.253);
+  z-index: 2;
+  cursor: pointer;
+}
+</style>
+<select id='ListaUsuario' Name="ListaUsuario" Size="5" style="display: none; width: 10%; float: left; height: 390;">  
+  <option> List item 1 </option> 
+  <option> List item 2 </option> 
+  <option> List item 3 </option> 
+  <option> List item N </option> 
+</select> 
+<h2 id="palavra" class="texto">Center Align Elements</h2>
+
+<div id=Players class="players">
+  <h2 id="player1" style="float: left;text-align:center;display: none;">Player1</h2>
+  <h2 id="player2" style="float: right;text-align: center;display: none;">Player2</h2>
+</div>
+
+<div id="dive" class="center">
+<canvas id="Canvas1" width=300 height="400" style="border:1px solid #d3d3d3; display: none; float: left;"></canvas>
+<pre id="messages" style="display: none; height: 400px; overflow: scroll; width: 90%; float: right;"></pre>
+
+<canvas id="Canvas2" width=300 height="400" style="border:1px solid #d3d3d3; display: none; "></canvas>
+</div>
+
+
+<button id="Convidar" title="Convidar" style="display: none; width: 10%; height: 30px;">Convidar</button>
+<div id="enviar" class="Enviar">
+<input type="text" id="messageBox" placeholder="Digite uma mensagem" style="display: none; width: 100%; margin-bottom: 10px; padding: 10px;" />
+<button id="send" title="Send Message!" style="display: none; width: 100%; height: 30px;">Enviar Mensagem</button>
+</div>
+<div class="Login">
+<input type="text" id="UsuarioNome" placeholder="Digite o nome de usuario aqui" style="display: block; width: 100%; margin-bottom: 10px; padding: 10px;" />
+<button id="enviausuario" title="Send Message!" style="display: block; width: 100%; height: 30px;">Escolher</button>
+</div>
+
+<div id="overlay" class="overlay">
+  <p>Desconhecido: convidou voce para jogar</p>
+  <button id="aceitar" title="Send Message!" style="display: block; width: 50%; height: 30px;float: left;">Aceitar</button>
+  <button id="recusar" title="Send Message!" style="display: block; width: 50%; height: 30px; ">Recusar</button>
+</div>
+
+
+<script type="text/javascript" src="client3.js"></script>
+

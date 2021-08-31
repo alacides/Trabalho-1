@@ -1,0 +1,127 @@
+<style>
+  .center {
+    margin:auto;
+    width: 100%;
+    justify-content: center;
+  }
+  .texto{
+    margin: auto;
+    text-align: center;
+    float:inline-start;
+    display: none;
+    
+  }
+  .players{
+    margin:auto;
+    width: 77%;
+  }
+  .login{
+    width: 20%;
+    margin: auto;
+    margin-top: 20%;
+  }
+  .Enviar{
+    float: right;
+    margin: auto;
+    width: 90%;
+  }
+  .overlay {
+  position: fixed;
+  display: none;
+  width: 20%;
+  height: 10%;
+  top: 20%;
+  left: 40%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.253);
+  z-index: 2;
+  cursor: pointer;
+}
+.opcao{
+  display: none;
+  width: 20%;
+  height: 20px;
+}
+</style>
+<select id='ListaUsuario' Name="ListaUsuario" Size="5" style="display: none; width: 10%; float: left; height: 390;">  
+  <option> List item 1 </option> 
+  <option> List item 2 </option> 
+  <option> List item 3 </option> 
+  <option> List item N </option> 
+</select> 
+<h2 id="palavra" class="texto">Center Align Elements</h2>
+
+<div id=Players class="players">
+  <h2 id="player1" style="float: left;text-align:center;display: none;">Player1</h2>
+  <h2 id="player2" style="float: right;text-align: center;display: none;">Player2</h2>
+</div>
+
+<div id="dive" class="center">
+<canvas id="Canvas1" width=300 height="400" style="border:1px solid #d3d3d3; display: none; float: left;"></canvas>
+<pre id="messages" style="display: none; height: 400px; overflow: scroll; width: 90%; float: right;"></pre>
+<div id="opcoes" style="width: 16%;">
+  <button id="buttonA" class="opcao">A</button>
+  <button id="buttonB" class="opcao">B</button>
+  <button id="buttonC" class="opcao">C</button>
+  <button id="buttonD" class="opcao">D</button>
+  <p></p>
+  <button id="buttonE" class="opcao">E</button>
+  <button id="buttonF" class="opcao">F</button>
+  <button id="buttonG" class="opcao">G</button>
+  <button id="buttonH" class="opcao">H</button>
+  <p></p>
+  <button id="buttonI" class="opcao">I</button>
+  <button id="buttonJ" class="opcao">J</button>
+  <button id="buttonK" class="opcao">K</button>
+  <button id="buttonL" class="opcao">L</button>
+  <p></p>
+  <button id="buttonM" class="opcao">M</button>
+  <button id="buttonN" class="opcao">N</button>
+  <button id="buttonO" class="opcao">O</button>
+  <button id="buttonP" class="opcao">P</button>
+  <p></p>
+  <button id="buttonQ" class="opcao">Q</button>
+  <button id="buttonR" class="opcao">R</button>
+  <button id="buttonS" class="opcao">S</button>
+  <button id="buttonT" class="opcao">T</button>
+  <p></p>
+  <button id="buttonU" class="opcao">U</button>
+  <button id="buttonV" class="opcao">V</button>
+  <button id="buttonW" class="opcao">W</button>
+  <button id="buttonX" class="opcao">X</button>
+  <p></p>
+  <button id="buttonY" class="opcao">Y</button>
+  <button id="buttonZ" class="opcao">Z</button>
+  <p></p>
+  <input type="text" id="adivinhar" placeholder="Digite a palavra a ser adivinhada" style="display: none; width: 85%; margin-bottom: 10px; padding: 10px;" />
+  <button id="btnadivinhar" style="width: 85%; height: 30px; display: none;">Enviar Palpite</button>
+</div>
+</div>
+
+
+<button id="Convidar" title="Convidar" style="display: none; width: 10%; height: 30px;">Convidar</button>
+<div id="enviar" class="Enviar">
+<input type="text" id="messageBox" placeholder="Digite uma mensagem" style="display: none; width: 100%; margin-bottom: 10px; padding: 10px;" />
+<button id="send" title="Send Message!" style="display: none; width: 100%; height: 30px;">Enviar Mensagem</button>
+</div>
+<div style="display: flex; margin: auto; justify-content: center;">
+  <button id="voltarlobby" title="Send Message!" style="display: none; width: 50%; height: 30px; ">Voltar ao lobby</button>
+</div>
+
+<div class="Login">
+<input type="text" id="UsuarioNome" placeholder="Digite o nome de usuario aqui" style="display: block; width: 100%; margin-bottom: 10px; padding: 10px;" />
+<button id="enviausuario" title="Send Message!" style="display: block; width: 100%; height: 30px;">Escolher</button>
+</div>
+
+<div id="overlay" class="overlay">
+  <p id="convite">Desconhecido: convidou voce para jogar</p>
+  <button id="aceitar" title="Send Message!" style="display: block; width: 50%; height: 30px;float: left;">Aceitar</button>
+  <button id="recusar" title="Send Message!" style="display: block; width: 50%; height: 30px; ">Recusar</button>
+</div>
+
+
+
+
+<script type="text/javascript" src="client3.js"></script>
+
