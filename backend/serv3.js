@@ -16,15 +16,12 @@ app.use(express.static(__dirname + '/frontend'));
 
 
 var app2 = express();
-
-
 var server2 = app2.listen(4000);
 app2.use(express.static(__dirname + '/mongodb'));
 const port = 10000
 const server = http.createServer(express);
 const wss = new WebSocket.Server({server})
 num_people = 0
-
 
 
 async function listapalavras() {
@@ -47,23 +44,6 @@ async function deletarpalavra(texto){
     var myquery = { palavra: texto };
     return await dbo.collection("palavras").deleteOne(myquery)
 }
-
-
-/*
-words = ['FACK','GARFIELD','TOMA','JARRY']
-function palavraaleatoria(){
-    plvaleatoria = 'ALFABETO'
-    listapalavras().then(palavras => {
-        min = Math.ceil(0);
-        max = Math.floor(palavras.length);
-        escolha = Math.floor(Math.random() * (max - min)) + min;
-        console.log(palavras[escolha].palavra + ' isso que foi mandado')
-        plvaleatoria = palavras[escolha].palavra
-        return plvaleatoria
-    })
-}*/
-
-
 
 function revelar(letra,palavraescondida,word){
     charada = ''
@@ -90,22 +70,6 @@ function revelar(letra,palavraescondida,word){
     vetor = [texto,erro,vitoria,palavraescondida]
     return vetor
 }
-
-
-
-
-
-/*
-rooms = {
-    number: 1,
-    userConn: 1
-}
-
-vet = []
-
-vet.push(rooms)
-vet[1].number = 2
-*/
 
 wss.on('connection', function connection(ws){
     //Usuarios.push(ws)
@@ -146,16 +110,6 @@ wss.on('connection', function connection(ws){
                 }
             })
             })
-            /*
-            palavraagora = palavraaleatoria()
-            wss.clients.forEach(function each(client){
-                if(client.id == data.jogadores[0] || client.id == data.jogadores[1]){
-                    alteracao = JSON.stringify({tipo:'alteracao',modo:'jogo',jogadores:data.jogadores,palavra: palavraagora})
-                    console.log(alteracao + '   ' + client.id)
-                    client.send(alteracao)
-                }
-            })
-            */
             
         }
         if(data.tipo == 'tentativa'){
@@ -258,27 +212,6 @@ wss.on('connection', function connection(ws){
         })
     })
 
-
-    /*
-    ws.on('message', function incoming(data) {
-        wss.clients.forEach(function each (client) {
-            if(client != ws && client.readyState == WebSocket.OPEN){
-                aa = ws.id + ': '+ JSON.parse(data)
-                vs = JSON.stringify({tipo: 'mensagem',Conteudo: aa})
-                client.send(vs)
-                console.log(vs)
-            }
-        })
-    })
-    */
-   
-
-
-
-
-
-
-
     ws.on('close', function connection(ws){
         Usuarios = []
         wss.clients.forEach(function each (client){
@@ -303,9 +236,6 @@ server.listen(port, function connection(ws){
 app2.post('/clicked', (req, res) => {
     const click = {clickTime: new Date()}
     console.log(click)
-    //console.log(db)
-    //console.log(req)
-    //req.body = JSON.parse(req.body)
     console.log(req.body)
     
     //inserepalavra().then(palavra => {
